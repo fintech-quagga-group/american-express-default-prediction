@@ -2,7 +2,13 @@
 
 In this project we develop a machine learning model that predicts credit defaults using real-world data from American Express to better manage risk in a consumer lending business. These models aim to provide a high-scoring solution to the Kaggle competition posted by American Express - [American Express Default Prediction](https://www.kaggle.com/c/amex-default-prediction). 
 
-## Outline
+Our report for our project will be listed in the [Project Report](#project-report) section of this readme, but a brief outline of our project and code is as follows: 
+
+1. Collect, impute, encode, and preprocess the [compressed data](https://www.kaggle.com/datasets/munumbutt/amexfeather) and [aggregate data](https://www.kaggle.com/datasets/huseyincot/amex-agg-data-pickle) found from other competititors. 
+
+---
+
+## Project Report 
 
 ### Competition Description
 
@@ -41,6 +47,24 @@ In developing a solution for this competition we hope to:
 
 ### Data Collection 
 
+The [original dataset](https://www.kaggle.com/competitions/amex-default-prediction/data?select=train_data.csv) posted by American Express had a few things to get around:  
+
+1. The training and testing sets were 16 and 33GB each 
+2. The columns, or features were hidden and grouped up to protect user privacy as so: 
+    * D_* = Delinquency variables
+    * S_* = Spend variables
+    * P_* = Payment variables
+    * B_* = Balance variables
+    * R_* = Risk variables
+3. There were lots of NaN values and there were too many to be dropped from the dataset. 
+4. The data was already normalized 
+
+Thankfully, other people in the competition came up with two datasets that we used in developing our models: 
+
+1. [The compressed data](https://www.kaggle.com/datasets/munumbutt/amexfeather)
+2. [The aggregate data](https://www.kaggle.com/datasets/huseyincot/amex-agg-data-pickle)
+
+However, these datasets did not impute the NaN values or encode the categorical features, so we decided to create imputed and one-hot encoded versions of these datasets. 
 
 
 ## Summary
