@@ -10,9 +10,26 @@ Our report for our project will be listed in the [Project Report](#project-repor
 
     * Compressed Feather Data
         * Notebooks - [amex_generate_features.ipynb](./Data_Collection/Feather_Data/amex_generate_features.ipynb) and [amex_generate_features_test.ipynb](./Data_Collection/Feather_Data/amex_generate_features_test.ipynb)
-        * Kaggle - []()
+        * Kaggle - [amex_generate_features.ipynb](https://www.kaggle.com/code/ethansilvas/amex-generate-features) and [amex_generate_features_test.ipynb](https://www.kaggle.com/ethansilvas/amex-generate-features-test)
     * Aggregate Data
-        * 
+        * Notebooks - 
+        * Kaggle - 
+2. Develop baseline models to see performance without much hyperparameter tuning or validation sets
+    * All models in [Baseline Models](./Baseline_Models/) folder for training and predicting with the compressed and aggregate data sets
+    * Examples: 
+        * Logistic Regression
+            * [train_logistic_regression_agg](https://www.kaggle.com/code/ethansilvas/train-logistic-regression-agg)
+            * [predict_logistic_regression_agg](https://www.kaggle.com/code/ethansilvas/predict-logistic-regression-agg)
+        * Shallow Neural Network 
+            * [train_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/train-shallow-nn-agg)
+            * [predict_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/predict-shallow-nn-agg)
+3. Tune the best performing models using validation, hyperparameters, hidden layers, etc. to maximize M score
+    * All models in [Tuned Models](./Tuned_Models/) folder for training and predicting with the aggregate data only, since we found that the aggregate data performed better for all models. 
+    * Examples: 
+        * Random Forest Classifier
+            * [tuned_random_forest_classifier_agg](https://www.kaggle.com/code/ethansilvas/tuned-random-forest-classifier-agg)
+        * Deep Neural Network
+            * [tuned_DNN_agg](https://www.kaggle.com/ethansilvas/tuned-dnn-agg)
 
 ---
 
@@ -37,6 +54,7 @@ In developing a solution for this competition we hope to:
 ### Process
 
 1. Data collection
+
     * Impute NaN values and one-hot encode the [compressed feather data](https://www.kaggle.com/datasets/munumbutt/amexfeather) and [aggregate data](https://www.kaggle.com/datasets/huseyincot/amex-agg-data-pickle)
 2. Develop baseline models
     * LGBM
@@ -51,26 +69,25 @@ In developing a solution for this competition we hope to:
 3. Tune models
     * Different hyperparameters specific to each model 
     * More hidden layers and different activation functions
-4. Determine best performing models
 
 ### Data Collection 
 
 The [original dataset](https://www.kaggle.com/competitions/amex-default-prediction/data?select=train_data.csv) posted by American Express had a few things to get around:  
 
-1. The training and testing sets were 16 and 33GB each 
-2. The columns, or features were hidden and grouped up to protect user privacy as so: 
+* The training and testing sets were 16 and 33GB each 
+* The columns, or features were hidden and grouped up to protect user privacy as so: 
     * D_* = Delinquency variables
     * S_* = Spend variables
     * P_* = Payment variables
     * B_* = Balance variables
     * R_* = Risk variables
-3. There were lots of NaN values and there were too many to be dropped from the dataset. 
-4. The data was already normalized 
+* There were lots of NaN values and there were too many to be dropped from the dataset. 
+* The data was already normalized 
 
 Thankfully, other people in the competition came up with two datasets that we used in developing our models: 
 
-1. [The compressed feather data](https://www.kaggle.com/datasets/munumbutt/amexfeather)
-2. [The aggregate data](https://www.kaggle.com/datasets/huseyincot/amex-agg-data-pickle)
+* [The compressed feather data](https://www.kaggle.com/datasets/munumbutt/amexfeather)
+* [The aggregate data](https://www.kaggle.com/datasets/huseyincot/amex-agg-data-pickle)
 
 However, these datasets did not impute the NaN values or encode the categorical features, so we decided to create imputed and one-hot encoded versions of these datasets. 
 
@@ -123,32 +140,32 @@ To run our Kaggle notebooks you will need to:
 
 * Data Collection
     * Feather Data
-        * [amex_generate_features.ipynb](https://www.kaggle.com/code/ethansilvas/amex-generate-features)
-        * [amex_generate_features_test.ipynb](https://www.kaggle.com/ethansilvas/amex-generate-features-test)
+        * [amex_generate_features](https://www.kaggle.com/code/ethansilvas/amex-generate-features)
+        * [amex_generate_features_test](https://www.kaggle.com/ethansilvas/amex-generate-features-test)
     * Aggregate Data 
-        * [amex_impute_encode_agg_data.ipynb](https://www.kaggle.com/ethansilvas/amex-impute-encode-agg-data)
+        * [amex_impute_encode_agg_data](https://www.kaggle.com/ethansilvas/amex-impute-encode-agg-data)
 * Baseline Models
     * Decision Tree Classifier 
-        * [train_decision_tree_classifier.ipynb](https://www.kaggle.com/code/ethansilvas/train-decision-tree-classifier)
-        * [predict_decision_tree_classifier.ipynb](https://www.kaggle.com/code/ethansilvas/predict-decision-tree-classifier)
+        * [train_decision_tree_classifier](https://www.kaggle.com/code/ethansilvas/train-decision-tree-classifier)
+        * [predict_decision_tree_classifier](https://www.kaggle.com/code/ethansilvas/predict-decision-tree-classifier)
     * Logistic Regression
-        * [train_logistic_regression.ipynb](https://www.kaggle.com/code/ethansilvas/train-logistic-regression)
-        * [predict_logistic_regression.ipynb](https://www.kaggle.com/code/ethansilvas/predict-logistic-regression)
+        * [train_logistic_regression](https://www.kaggle.com/code/ethansilvas/train-logistic-regression)
+        * [predict_logistic_regression](https://www.kaggle.com/code/ethansilvas/predict-logistic-regression)
     * Logistic Regression Aggregate 
-        * [train_logistic_regression_agg.ipynb](https://www.kaggle.com/code/ethansilvas/train-logistic-regression-agg)
-        * [predict_logistic_regression_agg.ipynb](https://www.kaggle.com/code/ethansilvas/predict-logistic-regression-agg)
+        * [train_logistic_regression_agg](https://www.kaggle.com/code/ethansilvas/train-logistic-regression-agg)
+        * [predict_logistic_regression_agg](https://www.kaggle.com/code/ethansilvas/predict-logistic-regression-agg)
     * Random Forest Classifier
-        * [train_random_forest_classifier.ipynb](https://www.kaggle.com/code/ethansilvas/train-random-forest-classifier)
-        * [predict_random_forest_classifier.ipynb](https://www.kaggle.com/code/ethansilvas/predict-random-forest-classifier)
+        * [train_random_forest_classifier](https://www.kaggle.com/code/ethansilvas/train-random-forest-classifier)
+        * [predict_random_forest_classifier](https://www.kaggle.com/code/ethansilvas/predict-random-forest-classifier)
     * Random Forest Classifier Aggregate
-        * [train_random_forest_classifier_agg.ipynb](https://www.kaggle.com/code/ethansilvas/train-random-forest-classifier-agg)
-        * [predict_random_forest_classifier_agg.ipynb](https://www.kaggle.com/code/ethansilvas/predict-random-forest-classifier-agg)
+        * [train_random_forest_classifier_agg](https://www.kaggle.com/code/ethansilvas/train-random-forest-classifier-agg)
+        * [predict_random_forest_classifier_agg](https://www.kaggle.com/code/ethansilvas/predict-random-forest-classifier-agg)
     * Shallow Neural Network 
-        * [train_shallow_nn.ipynb](https://www.kaggle.com/code/ethansilvas/train-shallow-nn)
-        * [predict_shallow_nn.ipynb](https://www.kaggle.com/code/ethansilvas/predict-shallow-nn)
+        * [train_shallow_nn](https://www.kaggle.com/code/ethansilvas/train-shallow-nn)
+        * [predict_shallow_nn](https://www.kaggle.com/code/ethansilvas/predict-shallow-nn)
     * Shallow Neural Network Aggregate
-        * [train_shallow_nn_agg.ipynb](https://www.kaggle.com/code/ethansilvas/train-shallow-nn-agg)
-        * [predict_shallow_nn_agg.ipynb](https://www.kaggle.com/code/ethansilvas/predict-shallow-nn-agg)
+        * [train_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/train-shallow-nn-agg)
+        * [predict_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/predict-shallow-nn-agg)
 * Tuned Models 
     * DNN
         * [tuned_DNN_agg](https://www.kaggle.com/ethansilvas/tuned-dnn-agg)
