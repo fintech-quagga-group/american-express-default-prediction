@@ -25,10 +25,8 @@ Our report for our project will be listed in the [Project Report](#project-repor
 3. Tune the best performing models using validation, hyperparameters, hidden layers, etc. to maximize M score
     * All models in [Tuned Models](./Tuned_Models/) folder for training and predicting with the aggregate data only, since we found that the aggregate data performed better for all models. 
     * Examples: 
-        * Random Forest Classifier
-            * [tuned_random_forest_classifier_agg](https://www.kaggle.com/code/ethansilvas/tuned-random-forest-classifier-agg)
-        * Deep Neural Network
-            * [tuned_DNN_agg](https://www.kaggle.com/ethansilvas/tuned-dnn-agg)
+        * Random Forest Classifier - [tuned_random_forest_classifier_agg](https://www.kaggle.com/code/ethansilvas/tuned-random-forest-classifier-agg)
+        * Deep Neural Network - [tuned_DNN_agg](https://www.kaggle.com/ethansilvas/tuned-dnn-agg)
 
 ---
 
