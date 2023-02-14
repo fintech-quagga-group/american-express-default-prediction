@@ -9,18 +9,15 @@ Our report for our project will be listed in the [Project Report](#project-repor
 1. Collect, impute, encode, and preprocess the [compressed feather data](https://www.kaggle.com/datasets/munumbutt/amexfeather) and [aggregate data](https://www.kaggle.com/datasets/huseyincot/amex-agg-data-pickle) found from other competititors. 
 
     * Compressed Feather Data
-        * Notebooks - [amex_generate_features.ipynb](./Data_Collection/Feather_Data/amex_generate_features.ipynb) and [amex_generate_features_test.ipynb](./Data_Collection/Feather_Data/amex_generate_features_test.ipynb)
-        * Kaggle - [amex_generate_features.ipynb](https://www.kaggle.com/code/ethansilvas/amex-generate-features) and [amex_generate_features_test.ipynb](https://www.kaggle.com/ethansilvas/amex-generate-features-test)
+        * [amex_generate_features](https://www.kaggle.com/code/ethansilvas/amex-generate-features)
+        * [amex_generate_features_test](https://www.kaggle.com/ethansilvas/amex-generate-features-test)
     * Aggregate Data
-        * Notebooks - 
-        * Kaggle - 
+        * [amex_impute_encode_agg_data](https://www.kaggle.com/ethansilvas/amex-impute-encode-agg-data)
 2. Develop baseline models to see performance without much hyperparameter tuning or validation sets
     * All models in [Baseline Models](./Baseline_Models/) folder for training and predicting with the compressed and aggregate data sets
     * Examples: 
-        * Logistic Regression
-            * [baseline_logistic_regression_agg](https://www.kaggle.com/code/ethansilvas/baseline-logistic-regression-agg)
-        * Shallow Neural Network 
-            * [baseline_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/baseline-shallow-nn)
+        * Logistic Regression - [baseline_logistic_regression_agg](https://www.kaggle.com/code/ethansilvas/baseline-logistic-regression-agg)
+        * Shallow Neural Network - [baseline_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/baseline-shallow-nn)
 3. Tune the best performing models using validation, hyperparameters, hidden layers, etc. to maximize M score
     * All models in [Tuned Models](./Tuned_Models/) folder for training and predicting with the aggregate data only, since we found that the aggregate data performed better for all models. 
     * Examples: 
@@ -85,8 +82,15 @@ Thankfully, other people in the competition came up with two datasets that we us
 * [The compressed feather data](https://www.kaggle.com/datasets/munumbutt/amexfeather)
 * [The aggregate data](https://www.kaggle.com/datasets/huseyincot/amex-agg-data-pickle)
 
-However, these datasets did not impute the NaN values or encode the categorical features, so we decided to create imputed and one-hot encoded versions of these datasets. 
+However, these datasets did not impute the NaN values or encode the categorical features, so we decided to create imputed and one-hot encoded versions of these datasets. We decided to impute the NaN valuse by replacing numerical columns with the mean for the column and categorical values with the most common value. We also opted to one-hot encode all of the categorical values. The code for this can be seen in our notebooks:
 
+* Feather Data
+    * [amex_generate_features](https://www.kaggle.com/code/ethansilvas/amex-generate-features)
+    * [amex_generate_features_test](https://www.kaggle.com/ethansilvas/amex-generate-features-test)
+* Aggregate Data 
+    * [amex_impute_encode_agg_data](https://www.kaggle.com/ethansilvas/amex-impute-encode-agg-data)
+
+Even with the compressed sized of these datasets, our TensorFlow models had trouble fitting so we followed the TensorFlow guides to building data pipelines: [Load a pandas DataFrame](https://www.tensorflow.org/tutorials/load_data/pandas_dataframe#full_example) and [Using tf.data with tf.keras](https://www.tensorflow.org/guide/data#using_tfdata_with_tfkeras). For our data, essentially all we needed to do was conver our columns to TensorFlow Input() objects and cast the datatypes into float32. This code can be seen at the beginning of each of our neural network files, ex: [baseline_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/baseline-shallow-nn)
 
 ## Summary
 
@@ -133,6 +137,8 @@ To run our Kaggle notebooks you will need to:
 
 
 ### Kaggle Links 
+
+Note: Some files are split due to memory constraints.
 
 * Data Collection
     * Feather Data
