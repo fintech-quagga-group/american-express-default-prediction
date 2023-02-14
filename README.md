@@ -20,8 +20,7 @@ Our report for our project will be listed in the [Project Report](#project-repor
         * Logistic Regression
             * [baseline_logistic_regression_agg](https://www.kaggle.com/code/ethansilvas/baseline-logistic-regression-agg)
         * Shallow Neural Network 
-            * [train_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/train-shallow-nn-agg)
-            * [predict_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/predict-shallow-nn-agg)
+            * [baseline_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/baseline-shallow-nn)
 3. Tune the best performing models using validation, hyperparameters, hidden layers, etc. to maximize M score
     * All models in [Tuned Models](./Tuned_Models/) folder for training and predicting with the aggregate data only, since we found that the aggregate data performed better for all models. 
     * Examples: 
@@ -150,13 +149,11 @@ To run our Kaggle notebooks you will need to:
     * Logistic Regression Aggregate 
         * [baseline_logistic_regression_agg](https://www.kaggle.com/code/ethansilvas/baseline-logistic-regression-agg)
     * Random Forest Classifier
-        * [train_random_forest_classifier](https://www.kaggle.com/code/ethansilvas/train-random-forest-classifier)
-        * [predict_random_forest_classifier](https://www.kaggle.com/code/ethansilvas/predict-random-forest-classifier)
+        * [baseline_random_forest_classifier](https://www.kaggle.com/code/ethansilvas/baseline-random-forest-classifier)
     * Random Forest Classifier Aggregate
         * [baseline_random_forest_classifier_agg](https://www.kaggle.com/code/ethansilvas/baseline-random-forest-classifier-agg)
     * Shallow Neural Network 
-        * [train_shallow_nn](https://www.kaggle.com/code/ethansilvas/train-shallow-nn)
-        * [predict_shallow_nn](https://www.kaggle.com/code/ethansilvas/predict-shallow-nn)
+        * [baseline_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/baseline-shallow-nn)
     * Shallow Neural Network Aggregate
         * [baseline_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/baseline-shallow-nn-agg)
 * Tuned Models 
