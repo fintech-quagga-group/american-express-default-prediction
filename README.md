@@ -167,7 +167,9 @@ To run our Kaggle notebooks you will need to:
         * [train_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/train-shallow-nn-agg)
         * [predict_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/predict-shallow-nn-agg)
 * Tuned Models 
-    * DNN
+    * Shallow Neural Network
+        * [tuned_shallow_nn_agg](https://www.kaggle.com/ethansilvas/tuned-shallow-nn-agg)
+    * Deep Neural Network
         * [tuned_DNN_agg](https://www.kaggle.com/ethansilvas/tuned-dnn-agg)
     * Logistic Regression
         * [tuned_logistic_regression_agg](https://www.kaggle.com/code/ethansilvas/tuned-logistic-regression-agg)
