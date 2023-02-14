@@ -18,8 +18,7 @@ Our report for our project will be listed in the [Project Report](#project-repor
     * All models in [Baseline Models](./Baseline_Models/) folder for training and predicting with the compressed and aggregate data sets
     * Examples: 
         * Logistic Regression
-            * [train_logistic_regression_agg](https://www.kaggle.com/code/ethansilvas/train-logistic-regression-agg)
-            * [predict_logistic_regression_agg](https://www.kaggle.com/code/ethansilvas/predict-logistic-regression-agg)
+            * [baseline_logistic_regression_agg](https://www.kaggle.com/code/ethansilvas/baseline-logistic-regression-agg)
         * Shallow Neural Network 
             * [train_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/train-shallow-nn-agg)
             * [predict_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/predict-shallow-nn-agg)
@@ -156,14 +155,12 @@ To run our Kaggle notebooks you will need to:
         * [train_random_forest_classifier](https://www.kaggle.com/code/ethansilvas/train-random-forest-classifier)
         * [predict_random_forest_classifier](https://www.kaggle.com/code/ethansilvas/predict-random-forest-classifier)
     * Random Forest Classifier Aggregate
-        * [train_random_forest_classifier_agg](https://www.kaggle.com/code/ethansilvas/train-random-forest-classifier-agg)
-        * [predict_random_forest_classifier_agg](https://www.kaggle.com/code/ethansilvas/predict-random-forest-classifier-agg)
+        * [baseline_random_forest_classifier_agg](https://www.kaggle.com/code/ethansilvas/baseline-random-forest-classifier-agg)
     * Shallow Neural Network 
         * [train_shallow_nn](https://www.kaggle.com/code/ethansilvas/train-shallow-nn)
         * [predict_shallow_nn](https://www.kaggle.com/code/ethansilvas/predict-shallow-nn)
     * Shallow Neural Network Aggregate
-        * [train_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/train-shallow-nn-agg)
-        * [predict_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/predict-shallow-nn-agg)
+        * [baseline_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/baseline-shallow-nn-agg)
 * Tuned Models 
     * Shallow Neural Network
         * [tuned_shallow_nn_agg](https://www.kaggle.com/ethansilvas/tuned-shallow-nn-agg)
