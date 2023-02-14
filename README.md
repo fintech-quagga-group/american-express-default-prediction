@@ -149,8 +149,7 @@ To run our Kaggle notebooks you will need to:
         * [train_decision_tree_classifier](https://www.kaggle.com/code/ethansilvas/train-decision-tree-classifier)
         * [predict_decision_tree_classifier](https://www.kaggle.com/code/ethansilvas/predict-decision-tree-classifier)
     * Logistic Regression
-        * [train_logistic_regression](https://www.kaggle.com/code/ethansilvas/train-logistic-regression)
-        * [predict_logistic_regression](https://www.kaggle.com/code/ethansilvas/predict-logistic-regression)
+        * [baseline_logistic_regression](https://www.kaggle.com/code/ethansilvas/baseline-logistic-regression)
     * Logistic Regression Aggregate 
         * [baseline_logistic_regression_agg](https://www.kaggle.com/code/ethansilvas/baseline-logistic-regression-agg)
     * Random Forest Classifier
