@@ -176,6 +176,8 @@ Note: Some files are split due to memory constraints.
         * [sgd-agg](https://www.kaggle.com/code/jeffreycrabill/sgd-agg)
     * XGB Classifier Aggregate
         * [xgb-classifier-agg](https://www.kaggle.com/naomyvelasco/xgb-classification-baseline)
+    * XGB Classifier
+        * [xgb-classifier-feather](https://www.kaggle.com/code/naomyvelasco/xgb-classifier-feather)
 * Tuned Models 
     * Shallow Neural Network
         * [tuned_shallow_nn_agg](https://www.kaggle.com/ethansilvas/tuned-shallow-nn-agg)
