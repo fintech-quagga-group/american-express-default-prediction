@@ -174,6 +174,8 @@ Note: Some files are split due to memory constraints.
         * [baseline_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/baseline-shallow-nn-agg)
     * SGD Classifier
         * [sgd-agg](https://www.kaggle.com/code/jeffreycrabill/sgd-agg)
+    * XGB Classifier Aggregate
+        * [xgb-classifier-agg](https://www.kaggle.com/naomyvelasco/xgb-classification-baseline)
 * Tuned Models 
     * Shallow Neural Network
         * [tuned_shallow_nn_agg](https://www.kaggle.com/ethansilvas/tuned-shallow-nn-agg)
