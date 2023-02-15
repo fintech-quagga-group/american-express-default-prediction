@@ -164,9 +164,9 @@ Note: Some files are split due to memory constraints.
         * [baseline_random_forest_classifier_agg](https://www.kaggle.com/code/ethansilvas/baseline-random-forest-classifier-agg)
     * KNN Classifier
         * [knnclassifier-agg-data](https://www.kaggle.com/code/karimbouzina/knnclassifier-agg-data)
-    * LGBM_Classifier
+    * LGBM Classifier
         * [lgbm-ftr-data](https://www.kaggle.com/code/karimbouzina/lgbm-ftr-data)
-    * LGBM_Classifier_Aggregate
+    * LGBM Classifier Aggregate
         * [lgbm-with-agg-data](https://www.kaggle.com/code/karimbouzina/lgbm-with-agg-data)
     * Shallow Neural Network 
         * [baseline_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/baseline-shallow-nn)
@@ -179,14 +179,19 @@ Note: Some files are split due to memory constraints.
     * XGB Classifier
         * [xgb-classifier-feather](https://www.kaggle.com/code/naomyvelasco/xgb-classifier-feather)
 * Tuned Models 
-    * Shallow Neural Network
-        * [tuned_shallow_nn_agg](https://www.kaggle.com/ethansilvas/tuned-shallow-nn-agg)
-    * Deep Neural Network
-        * [tuned_DNN_agg](https://www.kaggle.com/ethansilvas/tuned-dnn-agg)
     * Logistic Regression
         * [tuned_logistic_regression_agg](https://www.kaggle.com/code/ethansilvas/tuned-logistic-regression-agg)
     * Random Forest Classifier
         * [tuned_random_forest_classifier_agg](https://www.kaggle.com/code/ethansilvas/tuned-random-forest-classifier-agg)
+    * Shallow Neural Network
+        * [tuned_shallow_nn_agg](https://www.kaggle.com/ethansilvas/tuned-shallow-nn-agg)
+    * Deep Neural Network
+        * [tuned_DNN_agg](https://www.kaggle.com/ethansilvas/tuned-dnn-agg)
+    * Logistic Regression + StratifiedKFold
+        * [tuned_logistic_regression_skfold](https://www.kaggle.com/code/ethansilvas/tuned-logistic-regression-skfold/settings)
+    * LGBM Classifier + StratifiedKFold
+        * [tuned_lgbm_skfold](https://www.kaggle.com/code/ethansilvas/tuned-lgbm-skfold)
+    
 
 Our presentation slides for this project are in the Resources folder: []()
 
