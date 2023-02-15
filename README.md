@@ -162,6 +162,12 @@ Note: Some files are split due to memory constraints.
         * [baseline_random_forest_classifier](https://www.kaggle.com/code/ethansilvas/baseline-random-forest-classifier)
     * Random Forest Classifier Aggregate
         * [baseline_random_forest_classifier_agg](https://www.kaggle.com/code/ethansilvas/baseline-random-forest-classifier-agg)
+    * KNN Classifier
+        * [knnclassifier-agg-data](https://www.kaggle.com/code/karimbouzina/knnclassifier-agg-data)
+    * LGBM_Classifier
+        * [lgbm-ftr-data](https://www.kaggle.com/code/karimbouzina/lgbm-ftr-data)
+    * LGBM_Classifier_Aggregate
+        * [lgbm-with-agg-data](https://www.kaggle.com/code/karimbouzina/lgbm-with-agg-data)
     * Shallow Neural Network 
         * [baseline_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/baseline-shallow-nn)
     * Shallow Neural Network Aggregate
