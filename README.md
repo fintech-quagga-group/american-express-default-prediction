@@ -192,10 +192,21 @@ To run our Kaggle notebooks you will need to:
 1. Sign in with your Kaggle account
 2. Go to the notebook and click the "Copy & Edit" button at the top right<br><br>
     ![Kaggle copy and edit button](./Resources/Images/copy_and_edit.png)
-3. Then you can either click the "Run All" button to run the file in the editor, or you can click the "Save Version" button that will give you the option to do a "Save and Run All (Commit)" which lets you run that version of the notebook in the background. Doing the save and run all option will likely be better since many of our notebooks take 30+ minutes to run in full. 
+3. Accept the Kaggle competition rules when prompted
+4. Then you can either click the "Run All" button to run the file in the editor, or you can click the "Save Version" button that will give you the option to do a "Save and Run All (Commit)" which lets you run that version of the notebook in the background. Doing the save and run all option will likely be better since many of our notebooks take 30+ minutes to run in full. 
 
     ![Run all editor button](./Resources/Images/run_all.png)
     ![Save version button](./Resources/Images/save_version.png)
+
+5. (Optional) If you would like to use one of our models in your own code, all models except for our SKFold models are downloadable in the "Data" section of each notebook:
+
+    ![Data button underneath notebook title in the navbar](./Resources/Images/data_section.png)
+
+    The downloadable model will be in the "Output" folder typically listed as `model_name.sav` or `model_name.h5` for neural network models:
+
+    ![List of output data files for a notebook showing downloadable model file and submission file](./Resources/Images/data_sources.png)
+
+6. (Optional) If you would like to verify model performance, you can download the `model_name_submission.csv` file, also located in the "Output" folder, and submit it using the "Late Submission" button on the [competition main page](https://www.kaggle.com/c/amex-default-prediction). 
 
 
 ### Kaggle Links 
@@ -250,6 +261,8 @@ Note: Some files are split due to memory constraints.
     * LGBM Classifier + StratifiedKFold
         * [tuned_lgbm_skfold](https://www.kaggle.com/code/ethansilvas/tuned-lgbm-skfold)
     
+
+### Other Files 
 
 Our presentation slides for this project are in the Resources folder: []()
 
