@@ -106,6 +106,10 @@ Since scikit-learn models are so easy to swap out with each other, we decided to
 
 For our baseline neural network we wanted to use a shallow neural network, meaning only one hidden layer, to get an idea of how we should add layers or nodes per layer when we decide to tune the model. This model performed extremely well considering that it only had one hidden layer with 116 nodes, a ReLU activation function, and adam optimizer. It got a submission score of 0.78462 which even now competes with most of our tuned models! Knowing what we know now, this performance is likely due to it having a 90% accuracy which we found to be the "sweetspot" for high performing models, as well as a top F1-score for 1 at 0.82. This model performed so well that we even decided to tune a shallow neural network and a deep neural network. 
 
+Graphs: 
+
+![Graph showing steady training loss decline for shallow neural network](./Resources/Images/baseline_nn_loss.png) ![Graph showing steady training accuracy increase for shallow neural network](./Resources/Images/baseline_nn_accuracy.png)
+
 ### XGBoost and LGBM
 
 We had seen from the Kaggle competition discussion that many competitors made use of XGBoost and LGBM models so we decided to try them as well. One thing to note is that many people used these models because they can handle NaN values in the data by themselves, but we wanted to see what they could do with our imputed and encoded data. These performed very well and produced submission scores above 0.77. We even tried using the XGB regressor, despite this being a classification problem, and it still did well with a submission score of 0.76512. From the XGB training M scores we could see that they might have overfit which wouldn't be too unrealistic since we did not use any hyperparameters. However, something surprising was that even despite having training accuracy above 90%, each of these models still provided great submission scores, so they couldn't have overfit that much. 
