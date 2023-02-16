@@ -170,18 +170,18 @@ Since our models had seemed to max out at around 0.78 submission score we decide
 
 ## Technologies
 
-
+Kaggle handles all code dependencies and we do not advise trying to run our notebooks on your own machine because of high memory usage. 
 
 The following dependencies are used: 
 1. [Pandas](https://github.com/pandas-dev/pandas) (1.3.5) - Data analysis
 2. [Matplotlib](https://github.com/matplotlib/matplotlib) (3.5.1) - Data visualization
-2. [Numpy](https://numpy.org/) (1.21.5) - Data calculations + Pandas support
-
----
-
-## Installation Guide
-
-
+3. [Numpy](https://numpy.org/) (1.21.5) - Data calculations + Pandas support
+4. [PyArrow](https://arrow.apache.org/docs/python/index.html) (11.0.0) - Working with .ftr files
+5. [TensorFlow](https://www.tensorflow.org/) (2.0.0+) - Deep neural network creation
+6. [Keras](https://keras.io/about/) - Deep neural network creation
+7. [Scikit-Learn](https://scikit-learn.org/stable/index.html) (1.1.3) - Machine learning tools and methods
+8. [XGBoost](https://xgboost.readthedocs.io/en/stable/) (1.7.0) - Classification machine learning model
+9. [LightGBM](https://lightgbm.readthedocs.io/en/v3.3.2/) (3.3.2) - Classification machine learning model
 
 ---
 
