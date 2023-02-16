@@ -266,6 +266,8 @@ Note: Some files are split due to memory constraints.
 
 Our presentation slides for this project are in the Resources folder: []()
 
+For each model, you can see any relevant images of evaluation metrics and plots in the [Model Images](./Resources/Model_Images/) folder. 
+
 ---
 
 ## Contributors
