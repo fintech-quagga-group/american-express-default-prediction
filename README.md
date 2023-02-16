@@ -132,13 +132,27 @@ We had seen from the Kaggle competition discussion that many competitors made us
 
 ## Tuned Models and Results 
 
+For our tuned models we chose the models that performed the best and had reasonable training times (maximum of 2 hours). This is where we started to implement validation sets instead of just training and then submitting the model. We tried our best to experiment with as many hyperparameter options as we could, but the scikit-learn models seemed to have the best performance with few hyperparameter tunings. Two of our tuned models we used with a new strategy of StratifiedKFolding to see how they would perform. StratifiedKFolding was chosen because the dataset is decently imbalanced. 
+
 ### Scikit-learn models
+
+These models only required a few hyperparameter changes to increase the performance, so tuning them was more about finding the best validation split percentage. A validation split of 25% ended up working best for both the logistic regression model and the random forest classifier. Tuning the random forest classifier was much harder as certain hyperparameters would result in either terrible performance or extremely long training times. This was our first clue that if we had more time we might try using something like RandomizedSearchCV() to automatically find the optimal hyperparameters for these kinds of models. Overall, the tuned logistic regression model was only slightly improved and it definitely felt as though the model had reached its limit in terms of performance, and the random forest classifier improved greatly from our baseline model but in the end did not produce great submission scores compared to other models. 
 
 ### TensorFlow Shallow and Deep Neural Networks
 
-### XGBoost and LGBM 
+As mentioned in the baseline section, our shallow neural network performed very well and since we found that adding more complexity to our model didn't increase performance we decided to tune a shallow and deep neural network to see the best performances we could get with tunings. Unfortunately, we could not find any combination of hyperparameters that would result in higher performance than our baseline shallow neural network. We tried using dropout, regularization, different numbers of layers and nodes, and training for different numbers of epochs but nothing seemed to give us better performance. We did notice that dropout specifically would greatly help in stopping our model from overfitting but at the cost of the model never reaching 90% accuracy on the validation set as all of our other models did. If we had more time we would continue testing different hyperparameters but for now our baseline model performed the best. 
+
+Shallow Graphs: 
+
+![Graph showing steady validation loss decline for shallow neural network](./Resources/Images/tuned_shallow_nn_loss.png) ![Graph showing steady validation accuracy increase for shallow neural network, but with a distinct split from the training graph](./Resources/Images/tuned_shallow_nn_accuracy.png)
+
+Deep Graphs
+
+![Graph showing steady validation loss decline for deep neural network](./Resources/Images/tuned_shallow_nn_loss.png) ![Graph showing steady validation accuracy increase for deep neural network](./Resources/Images/tuned_shallow_nn_accuracy.png)
 
 ### Implementing StratifiedKFold
+
+Since our models had seemed to max out at around 0.78 submission score we decided to check out the community discussion to see if we could use any other strategies that we had not used. We found that people were using StratifiedKFold() splitting to reduce the impact of the class imbalance in the dataset. We first tried using it with our simpler tuned logistic regression model and it only very slightly increased performance. However, we had seen a few people use StratifiedKFold with LGBM so we tried this as well (still with our imputed and encoded data). Luckily this greatly improved performance and got our submission score up to 0.79185! This model had a lot more hyperparameters we could tune but the most important ones seemed to be n_estimators, num_leaves, learning_rate, and reg_alpha. Since there were different models per fold, we noticed that his also seemed to help with overfitting since the loss curves for each fold were consistent and not jumping around like we had seen with other models.
 
 ### Scores
 
@@ -156,28 +170,18 @@ We had seen from the Kaggle competition discussion that many competitors made us
 
 ## Technologies
 
-This is a Python 3.7 project ran using a JupyterLab in a conda dev environment. 
+
 
 The following dependencies are used: 
-1. [Jupyter](https://jupyter.org/) - Running code 
-2. [Conda](https://github.com/conda/conda) (4.13.0) - Dev environment
 3. [Pandas](https://github.com/pandas-dev/pandas) (1.3.5) - Data analysis
 4. [Matplotlib](https://github.com/matplotlib/matplotlib) (3.5.1) - Data visualization
 5. [Numpy](https://numpy.org/) (1.21.5) - Data calculations + Pandas support
-6. [hvPlot](https://hvplot.holoviz.org/index.html) (0.8.1) - Interactive Pandas plots 
-7. [holoviews](https://holoviews.org/) (1.15.2) - Interactive Pandas plots
 
 ---
 
 ## Installation Guide
 
-If you would like to run the program in JupyterLab, install the [Anaconda](https://www.anaconda.com/products/distribution) distribution and run `jupyter lab` in a conda dev environment.
 
-To ensure that your notebook runs properly you can use the [requirements.txt](/Resources/requirements.txt) file to create an exact copy of the conda dev environment used to create the notebook. 
-
-Create a copy of the conda dev environment with `conda create --name myenv --file requirements.txt`
-
-Then install the requirements with `conda install --name myenv --file requirements.txt`
 
 ---
 
