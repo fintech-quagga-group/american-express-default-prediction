@@ -50,15 +50,15 @@ In developing a solution for this competition we hope to:
 
     * Impute NaN values and one-hot encode the [compressed feather data](https://www.kaggle.com/datasets/munumbutt/amexfeather) and [aggregate data](https://www.kaggle.com/datasets/huseyincot/amex-agg-data-pickle)
 2. Develop baseline models
-    * LGBM
-    * XGBoost
     * Scikit-learn models
         * LogisticRegression
         * DecisionTreeClassifier
         * RandomForestClassifier
-        * SVC
+        * SGD Classifier
         * KNN Classifier
     * Shallow neural network (1 hidden layer)
+    * LGBM
+    * XGBoost
 3. Tune models
     * Different hyperparameters specific to each model 
     * More hidden layers and different activation functions
@@ -148,7 +148,7 @@ Shallow Graphs:
 
 Deep Graphs
 
-![Graph showing steady validation loss decline for deep neural network](./Resources/Images/tuned_shallow_nn_loss.png) ![Graph showing steady validation accuracy increase for deep neural network](./Resources/Images/tuned_shallow_nn_accuracy.png)
+![Graph showing steady validation loss decline for deep neural network](./Resources/Images/tuned_dnn_loss.png) ![Graph showing steady validation accuracy increase for deep neural network](./Resources/Images/tuned_dnn_accuracy.png)
 
 ### Implementing StratifiedKFold
 
