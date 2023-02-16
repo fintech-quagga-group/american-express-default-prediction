@@ -21,8 +21,8 @@ Our report for our project will be listed in the [Project Report](#project-repor
 3. Tune the best performing models using validation, hyperparameters, hidden layers, etc. to maximize M score
     * All models in [Tuned Models](./Tuned_Models/) folder for training and predicting with the aggregate data only, since we found that the aggregate data performed better for all models. 
     * Examples: 
-        * Random Forest Classifier - [tuned_random_forest_classifier_agg](https://www.kaggle.com/code/ethansilvas/tuned-random-forest-classifier-agg)
         * Deep Neural Network - [tuned_DNN_agg](https://www.kaggle.com/ethansilvas/tuned-dnn-agg)
+        * LGBM + SKFold - * [tuned_lgbm_skfold](https://www.kaggle.com/code/ethansilvas/tuned-lgbm-skfold)
 
 ---
 
@@ -173,9 +173,9 @@ Since our models had seemed to max out at around 0.78 submission score we decide
 
 
 The following dependencies are used: 
-3. [Pandas](https://github.com/pandas-dev/pandas) (1.3.5) - Data analysis
-4. [Matplotlib](https://github.com/matplotlib/matplotlib) (3.5.1) - Data visualization
-5. [Numpy](https://numpy.org/) (1.21.5) - Data calculations + Pandas support
+1. [Pandas](https://github.com/pandas-dev/pandas) (1.3.5) - Data analysis
+2. [Matplotlib](https://github.com/matplotlib/matplotlib) (3.5.1) - Data visualization
+2. [Numpy](https://numpy.org/) (1.21.5) - Data calculations + Pandas support
 
 ---
 
