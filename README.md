@@ -110,7 +110,7 @@ For our baseline neural network we wanted to use a shallow neural network, meani
 
 We had seen from the Kaggle competition discussion that many competitors made use of XGBoost and LGBM models so we decided to try them as well. One thing to note is that many people used these models because they can handle NaN values in the data by themselves, but we wanted to see what they could do with our imputed and encoded data. These performed very well and produced submission scores above 0.77. We even tried using the XGB regressor, despite this being a classification problem, and it still did well with a submission score of 0.76512. From the XGB training M scores we could see that they might have overfit which wouldn't be too unrealistic since we did not use any hyperparameters. However, something surprising was that even despite having training accuracy above 90%, each of these models still provided great submission scores, so they couldn't have overfit that much. 
 
-### Scores and Kaggle Links
+### Scores
 
 | Model                    | Train F1-Score 0 | Train F1-Score 1 | Train Accuracy | Train M Score | Test M Score |
 |--------------------------|------------------|------------------|----------------|---------------|--------------|
@@ -125,22 +125,6 @@ We had seen from the Kaggle competition discussion that many competitors made us
 | XGB Regressor            | 0.94             | 0.84             | 92%            | 0.83929       | 0.76512      |       |
 
 **Note: these results are the best performing training results, and are all from using the aggregate data set.**
-
-* Decision Tree Classifier 
-    * [train_decision_tree_classifier](https://www.kaggle.com/code/ethansilvas/train-decision-tree-classifier)
-    * [predict_decision_tree_classifier](https://www.kaggle.com/code/ethansilvas/predict-decision-tree-classifier)
-* Logistic Regression
-    * [baseline_logistic_regression](https://www.kaggle.com/code/ethansilvas/baseline-logistic-regression)
-* Logistic Regression Aggregate 
-    * [baseline_logistic_regression_agg](https://www.kaggle.com/code/ethansilvas/baseline-logistic-regression-agg)
-* Random Forest Classifier
-    * [baseline_random_forest_classifier](https://www.kaggle.com/code/ethansilvas/baseline-random-forest-classifier)
-* Random Forest Classifier Aggregate
-    * [baseline_random_forest_classifier_agg](https://www.kaggle.com/code/ethansilvas/baseline-random-forest-classifier-agg)
-* KNN Classifier
-    * [knnclassifier-agg-data](https://www.kaggle.com/code/karimbouzina/knnclassifier-agg-data)
-* SGD Classifier
-    * [sgd-agg](https://www.kaggle.com/code/jeffreycrabill/sgd-agg)
 
 ## Tuned Models and Results 
 
