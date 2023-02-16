@@ -100,13 +100,17 @@ In our files, you will notice that a lot of models have two different versions: 
 
 ### Scikit-learn models
 
-Since scikit-learn models are so easy to swap out with each other, we decided to do lots of experimenting with different models to see which ones would perform well. Aside from the
+Since scikit-learn models are so easy to swap out with each other, we decided to do lots of experimenting with different models to see which ones would perform well. Aside from the decision tree classifier, which overfit to the training set, most models performed well and generated over a 0.70 M score when submitting to the competition. We were very surprised at how well these models were performing considering that for the most part we did not use any hyperparameters and left the models in their default state ex: `model = LogisticRegression()`. Some models like the KNN classifier and the SGD classifier either didn't perform as well as the others or took so long to train that it wasn't worth their performance. The only real anomoly with these models was the surprisingly low F1 score for 1 (credit default) for the random forest classifier. Other than that, the other models performed around the same while hovering around 90% accuracy on the training set. 
 
 ### TensorFlow Neural Network 
 
+For our baseline neural network we wanted to use a shallow neural network, meaning only one hidden layer, to get an idea of how we should add layers or nodes per layer when we decide to tune the model. This model performed extremely well considering that it only had one hidden layer with 116 nodes, a ReLU activation function, and adam optimizer. It got a submission score of 0.78462 which even now competes with most of our tuned models! Knowing what we know now, this performance is likely due to it having a 90% accuracy which we found to be the "sweetspot" for high performing models, as well as a top F1-score for 1 at 0.82. This model performed so well that we even decided to tune a shallow neural network and a deep neural network. 
+
 ### XGBoost and LGBM
 
-### Results and Kaggle Links
+We had seen from the Kaggle competition discussion that many competitors made use of XGBoost and LGBM models so we decided to try them as well. One thing to note is that many people used these models because they can handle NaN values in the data by themselves, but we wanted to see what they could do with our imputed and encoded data. These performed very well and produced submission scores above 0.77. We even tried using the XGB regressor, despite this being a classification problem, and it still did well with a submission score of 0.76512. From the XGB training M scores we could see that they might have overfit which wouldn't be too unrealistic since we did not use any hyperparameters. However, something surprising was that even despite having training accuracy above 90%, each of these models still provided great submission scores, so they couldn't have overfit that much. 
+
+### Scores and Kaggle Links
 
 | Model                    | Train F1-Score 0 | Train F1-Score 1 | Train Accuracy | Train M Score | Test M Score |
 |--------------------------|------------------|------------------|----------------|---------------|--------------|
@@ -118,7 +122,7 @@ Since scikit-learn models are so easy to swap out with each other, we decided to
 | Shallow Neural Network   | 0.93             | 0.82             | 90%            | 0.79305       | 0.78462      |
 | LGBM Classifier          | 0.94             | 0.82             | 91%            | 0.58849       | 0.78137      |
 | XGB Classifier           | 0.95             | 0.85             | 92%            | 0.85171       | 0.77002      |
-| XGB Regressor            | 0.94             | 0.84             | 92%            | 0.83929       |              |
+| XGB Regressor            | 0.94             | 0.84             | 92%            | 0.83929       | 0.76512      |       |
 
 **Note: these results are the best performing training results, and are all from using the aggregate data set.**
 
@@ -137,8 +141,6 @@ Since scikit-learn models are so easy to swap out with each other, we decided to
     * [knnclassifier-agg-data](https://www.kaggle.com/code/karimbouzina/knnclassifier-agg-data)
 * SGD Classifier
     * [sgd-agg](https://www.kaggle.com/code/jeffreycrabill/sgd-agg)
-
-
 
 ## Tuned Models and Results 
 
