@@ -253,7 +253,7 @@ Note: Some files are split due to memory constraints.
     * Random Forest Classifier
         * [tuned_random_forest_classifier_agg](https://www.kaggle.com/code/ethansilvas/tuned-random-forest-classifier-agg)
     * XGB Classifier
-        * [tuned_xgb_classifier](https://www.kaggle.com/naomyvelasco/xgb-classification-agg-tuned)
+        * [xgb_classifier](https://www.kaggle.com/naomyvelasco/xgb-classification-agg-tuned)
     * Shallow Neural Network
         * [tuned_shallow_nn_agg](https://www.kaggle.com/ethansilvas/tuned-shallow-nn-agg)
     * Deep Neural Network
@@ -262,6 +262,7 @@ Note: Some files are split due to memory constraints.
         * [tuned_logistic_regression_skfold](https://www.kaggle.com/code/ethansilvas/tuned-logistic-regression-skfold/settings)
     * LGBM Classifier + StratifiedKFold
         * [tuned_lgbm_skfold](https://www.kaggle.com/code/ethansilvas/tuned-lgbm-skfold)
+   
     
 
 ### Other Files 
