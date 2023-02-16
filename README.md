@@ -1,6 +1,6 @@
 # American Express Default Prediction - Kaggle Competition
 
-In this project we develop a machine learning model that predicts credit defaults using real-world data from American Express to better manage risk in a consumer lending business. These models aim to provide a high-scoring solution to the Kaggle competition posted by American Express - [American Express Default Prediction](https://www.kaggle.com/c/amex-default-prediction). 
+In this project we develop machine learning models that predict credit defaults using real-world data from American Express to better manage risk in a consumer lending business. These models aim to provide a high-scoring solution to the Kaggle competition posted by American Express - [American Express Default Prediction](https://www.kaggle.com/c/amex-default-prediction). 
 
 This repository holds and organizes our notebooks downloaded from Kaggle. The full list of links to each notebook is listed in the [Usage](#usage) section of this readme. Instructions on how to run the notebooks yourself are also included. 
 
