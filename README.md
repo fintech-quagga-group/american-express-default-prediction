@@ -14,12 +14,12 @@ Our report for our project will be listed in the [Project Report](#project-repor
     * Aggregate Data
         * [amex_impute_encode_agg_data](https://www.kaggle.com/ethansilvas/amex-impute-encode-agg-data)
 2. Develop baseline models to see performance without much hyperparameter tuning or validation sets
-    * All models in [Baseline Models](./Baseline_Models/) folder for training and predicting with the compressed and aggregate data sets
+    * All models are in the [Baseline Models](./Baseline_Models/) folder for training and predicting with the compressed and aggregate data sets
     * Examples: 
         * Logistic Regression - [baseline_logistic_regression_agg](https://www.kaggle.com/code/ethansilvas/baseline-logistic-regression-agg)
         * Shallow Neural Network - [baseline_shallow_nn_agg](https://www.kaggle.com/code/ethansilvas/baseline-shallow-nn)
 3. Tune the best performing models using validation, hyperparameters, hidden layers, etc. to maximize M score
-    * All models in [Tuned Models](./Tuned_Models/) folder for training and predicting with the aggregate data only, since we found that the aggregate data performed better for all models. 
+    * All models are in the [Tuned Models](./Tuned_Models/) folder for training and predicting with the aggregate data only, since we found that the aggregate data performed better for all models. 
     * Examples: 
         * Deep Neural Network - [tuned_DNN_agg](https://www.kaggle.com/ethansilvas/tuned-dnn-agg)
         * LGBM + SKFold - * [tuned_lgbm_skfold](https://www.kaggle.com/code/ethansilvas/tuned-lgbm-skfold)
