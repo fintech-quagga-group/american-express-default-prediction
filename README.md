@@ -94,6 +94,50 @@ Even with the compressed sized of these datasets, our TensorFlow models had trou
 
 ## Baseline Models
 
+Our goal with the baseline models was to try as many machine learning models as we could to see which ones performed well with the problem so that we could then take the best performing ones and tune them to maximize our competition score. We tried to keep these baseline models as simple as possible which meant we didn't really experiment with different hyperparameters and did not introduce validation sets. Since this is a binary classification problem, we mainly focused on using classifier models and tried many different kinds from scikit-learn, XGBoost, LGBM, and with tensorflow neural networks. 
+
+In our files, you will notice that a lot of models have two different versions: a normal version and an "aggregate" version. As metioned in the [Data Collection](#data-collection) section, at this time in our project we were testing with two different datasets. 
+
+### Scikit-learn models
+
+Since scikit-learn models are so easy to swap out with each other, we decided to do lots of experimenting with different models to see which ones would perform well. Aside from the
+
+### TensorFlow Neural Network 
+
+### XGBoost and LGBM
+
+### Results and Kaggle Links
+
+| Model                    | Train F1-Score 0 | Train F1-Score 1 | Train Accuracy | Train M Score | Test M Score |
+|--------------------------|------------------|------------------|----------------|---------------|--------------|
+| Decision Tree Classifier | 1.0              | 1.0              | 100%           | 1.0           | 0.34586      |
+| Logistic Regression      | 0.93             | 0.80             | 90%            | 0.77471       | 0.77498      |
+| Random Forest Classifier | 0.91             | 0.69             | 86%            | 0.63409       | 0.71774      |
+| KNN Classifier           | 0.95             | 0.83             | 92%            | 0.70400       |              |
+| SGD Classifier           | 0.93             | 0.76             | 89%            | 0.74047       | 0.73017      |
+| Shallow Neural Network   | 0.93             | 0.82             | 90%            | 0.79305       | 0.78462      |
+| LGBM Classifier          | 0.94             | 0.82             | 91%            | 0.58849       | 0.78137      |
+| XGB Classifier           | 0.95             | 0.85             | 92%            | 0.85171       | 0.77002      |
+| XGB Regressor            | 0.94             | 0.84             | 92%            | 0.83929       |              |
+
+**Note: these results are the best performing training results, and are all from using the aggregate data set.**
+
+* Decision Tree Classifier 
+    * [train_decision_tree_classifier](https://www.kaggle.com/code/ethansilvas/train-decision-tree-classifier)
+    * [predict_decision_tree_classifier](https://www.kaggle.com/code/ethansilvas/predict-decision-tree-classifier)
+* Logistic Regression
+    * [baseline_logistic_regression](https://www.kaggle.com/code/ethansilvas/baseline-logistic-regression)
+* Logistic Regression Aggregate 
+    * [baseline_logistic_regression_agg](https://www.kaggle.com/code/ethansilvas/baseline-logistic-regression-agg)
+* Random Forest Classifier
+    * [baseline_random_forest_classifier](https://www.kaggle.com/code/ethansilvas/baseline-random-forest-classifier)
+* Random Forest Classifier Aggregate
+    * [baseline_random_forest_classifier_agg](https://www.kaggle.com/code/ethansilvas/baseline-random-forest-classifier-agg)
+* KNN Classifier
+    * [knnclassifier-agg-data](https://www.kaggle.com/code/karimbouzina/knnclassifier-agg-data)
+* SGD Classifier
+    * [sgd-agg](https://www.kaggle.com/code/jeffreycrabill/sgd-agg)
+
 
 
 ## Tuned Models and Results 
