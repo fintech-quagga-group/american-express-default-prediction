@@ -271,7 +271,7 @@ Note: Some files are split due to memory constraints.
 
 ### Other Files 
 
-Our presentation slides for this project are in the Resources folder: []()
+Our presentation slides for this project are in the [Presentation Slides](./Resources/Presentation_Slides/) folder.
 
 For each model, you can see any relevant images of evaluation metrics and plots in the [Model Images](./Resources/Model_Images/) folder. 
 
