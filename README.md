@@ -160,11 +160,15 @@ Since our models had seemed to max out at around 0.78 submission score we decide
 |------------------------------|-----------------------|-----------------------|---------------------|--------------------|--------------|
 | Logistic Regression          | 0.93                  | 0.80                  | 90%                 | 0.78446            | 0.77868      |
 | Random Forest Classifier     | 0.93                  | 0.80                  | 89%                 | 0.76154            | 0.75896      |
-| XGB Regressor                | 0.95                  | 0.86                  | 93%                 | 0.86363            | 0.75381      |
+| XGB Classifier               | 0.95                  | 0.85                  | 92%                 | 0.85256            | 0.76803      |
 | Shallow Neural Network       | NA                    | NA                    | 89%                 | NA                 | 0.76586      |
 | Deep Neural Network          | NA                    | NA                    | 90%                 | NA                 | 0.78412      |
 | Logistic Regression + SKFold | 0.93                  | 0.80                  | 90%                 | 0.77890            | 0.77890      |
 | LGBM + SKFold                | 0.94                  | 0.81                  | 90%                 | 0.79200            | 0.79185      |
+
+### Tuned Submissions
+
+![Kaggle screenshot showing all scores of our tuned models](./Resources/Images/tuned_submissions.png)
 
 ---
 
